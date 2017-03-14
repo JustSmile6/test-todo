@@ -1,2 +1,10 @@
 <h1>My Tasks</h1>
-<p>Add new tasks...</p>
+
+<button type="button" class="btn btn-default"><%= link_to "New Task", new_item_path %></button>
+
+<hr>
+
+<% @items.each do |item| %>
+    <h2><%= item.title %></h2>
+    <p><%= item.description %></p>
+<% end %>
